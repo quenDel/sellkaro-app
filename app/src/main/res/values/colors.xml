@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#d50000</color>
+    <color name="colorPrimaryDark">#bc0000</color>
+    <color name="colorAccent">#33A0E8</color>
+    <color name="color_app_bg">#f7f7f7</color>
+    <color name="color_devider">#f1f1f1</color>
+
+    <color name="colorbtn">#3b5998</color>
+
+    <color name="colorYellow">#f9d700</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorgray_btn">#808080</color>
+    <color name="colorGray">#d5d5d5</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlue">#283593</color>
+    <color name="colorTransBlack">#e6000000</color>
+    <color name="colorBlackTRance">#51000000</color>
+    <color name="textcolor">#ff000000</color>
+    <color name="text1color">#ff717374</color>
+    <color name="bordercolor">#ff7e7c7c</color>
+    <color name="imgborder">#ffefeff4</color>
+    <color name="btncolor">#ffdf4542</color>
+    <color name="btn2color">#ff565555</color>
+    <color name="signuptextcolor">#e6fcfcfc</color>
+    <color name="signuptextfieldcolor">#ffafa9a9</color>
+    <color name="loginbtncolor">#ffffff</color>
+    <color name="green">#4bd662</color>
+    <color name="public_grey_color">#f0eff5</color>
+<!--New -->
+    <color name="shadow1">#f5f5f5</color>
+    <color name="shadow2">#ededed</color>
+    <color name="shadow3">#f7f7f9</color>
+    <color name="shadow4">#c9ced6</color>
+    <color name="shadow5">#dbdbdb</color>
+    <color name="shadow6">#c0bdbd</color>
+
+
+    <color name="lightGrey">#F0F0F0</color>
+    <color name="duskYellow">#ECD85D</color>
+
+
+
+
+
+</resources>

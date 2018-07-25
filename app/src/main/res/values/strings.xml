@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">SellKaro</string>
+    <string name="Client_id">817699729630-rfpmcsmqnfluc6o6u41b1b8mi2sofqar.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">221081768715215</string>
+    <string name="fb_login_protocol_scheme">fb221081768715215</string>
+    <string name="rupeeSymbolWithValue">₹ 31,000</string>
+    <string name="rupeeSymbol">₹</string>
+
+
+    <string name="login"><b>Log In</b></string>
+    <string name="sellkaro_is_the_simplest_and_most_trusted_way_to_buy_sell_items_with_a_friendly_and_trusted_community_all_over_india"><![CDATA[Sellkaro is the simplest and most trusted way to buy & sell items with a friendly and trusted community all over India]]></string>
+    <string name="a_fun_marketplace_for_the_mobile_generation">A FUN MARKETPLACE FOR THE MOBILE GENERATION</string>
+    <string name="Error">Error</string>
+    <string name="ok">OK</string>
+    <string name="Please_check_network">Please check your network connection</string>
+    <string name="alert">Alert</string>
+    <string name="carousell_account">Your mobile phone number is now verified and linked to your Sellkaro account!</string>
+    <string name="verify_phone_no_otp">Please enter the confirmation code sent to +919754000732</string>
+    <string name="mobile_phone_no_enter">Enter your Mobile Phone Number</string>
+    <string name="verify_mobile_number_details">Secure your Sellkaro account by verifying your personal mobile phone number</string>
+    <string name="sign_up">Sellkaro is a safe and trusty commounity add a profile to let ochers know who there chatting with!</string>
+    <string name="forgot_your_password">Forgot Password?</string>
+    <string name="signup">Sign up</string>
+    <string name="signin">Log In</string>
+    <string name="verify_mobile">Verify phone number</string>
+    <string name="selectCity">Select city</string>
+    <string name="mailing_delivery"><![CDATA[Mailing & Delivery]]></string>
+
+</resources>

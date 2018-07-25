@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/productListing"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:contentInsetEnd="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetStart="0dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!-- This is a centered logo -->
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/ic_arrow_back_black_24dp" />
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/imgBack"
+                    android:gravity="center_vertical"
+                    android:text="Complete your listing"
+                    android:textColor="@color/colorWhite" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingLeft="10dp"
+                    android:drawablePadding="5dp"
+                    android:drawableLeft="@drawable/ic_star_red_24dp"
+                    android:paddingTop="7dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Fields are required"
+                    android:textColor="@color/colorgray_btn"
+                    android:textSize="@dimen/text_size_12" />
+
+                <EditText
+                    android:id="@+id/edtTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Listing Title"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/ic_star_red_24dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_16" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/color_devider"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="7dp"
+                    android:text="PRICE"
+                    android:textColor="@color/colorgray_btn"
+                    android:textSize="@dimen/text_size_14" />
+
+                <EditText
+                    android:id="@+id/edtPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="3dp"
+                    android:drawableLeft="@drawable/ic_rupee_symbol"
+                    android:hint="Price"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/ic_star_red_24dp"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapWords"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/color_devider"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="7dp"
+                    android:drawableRight="@drawable/ic_star_red_24dp"
+                    android:drawablePadding="5dp"
+                    android:text="ITEM CONDITION"
+                    android:textColor="@color/colorgray_btn"
+                    android:textSize="@dimen/text_size_14" />
+
+                <RadioGroup
+                    android:id="@+id/rgCondition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:inputType="text"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rbNew"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="5dp"
+                        android:layoutDirection="rtl"
+                        android:text="New"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/btn2color"
+                        android:textSize="@dimen/text_size_14" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorGray" />
+
+
+                    <RadioButton
+                        android:id="@+id/rbMint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="5dp"
+                        android:layoutDirection="rtl"
+                        android:text="Mint"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/btn2color"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorGray" />
+
+                    <RadioButton
+                        android:id="@+id/rbUsed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="5dp"
+                        android:layoutDirection="rtl"
+                        android:text="Used"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/btn2color"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorGray" />
+
+                    <RadioButton
+                        android:id="@+id/rbLightlyUsed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="5dp"
+                        android:layoutDirection="rtl"
+                        android:text="Lightly Used"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/btn2color"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorGray" />
+
+                    <RadioButton
+                        android:id="@+id/rbFairlyUsed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="5dp"
+                        android:layoutDirection="rtl"
+                        android:text="Fairly Used"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/btn2color"
+                        android:textSize="@dimen/text_size_14" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/color_devider"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="7dp"
+                    android:text="DESCRIPTION"
+                    android:drawableRight="@drawable/ic_star_red_24dp"
+                    android:drawablePadding="5dp"
+                    android:paddingRight="15dp"
+                    android:textColor="@color/colorgray_btn"
+                    android:textSize="@dimen/text_size_14" />
+
+
+                <EditText
+                    android:id="@+id/edtSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_gray"
+                    android:drawablePadding="5dp"
+                    android:gravity="start|top"
+                    android:hint="Enter description..."
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="7dp"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:text="Describe what you are selling and include any details a buyer might be interested in People love items with stories."
+                    android:textColor="@color/colorgray_btn"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/color_devider"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="7dp"
+                    android:drawableRight="@drawable/ic_star_red_24dp"
+                    android:drawablePadding="5dp"
+                    android:paddingRight="15dp"
+                    android:text="MEET-UP OR DELIVERY?"
+                    android:textColor="@color/colorgray_btn"
+                    android:textSize="@dimen/text_size_14" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_toLeftOf="@+id/swMeetup"
+                        android:paddingBottom="7dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="7dp"
+                        android:text="Meet-Up"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <Switch
+                        android:id="@+id/swMeetup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:checked="true"
+                        android:thumbTint="@color/green" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorGray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="7dp"
+                    android:paddingTop="7dp">
+
+                    <TextView
+                        android:id="@+id/preferredLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/imgarroa"
+                        android:paddingLeft="15dp"
+                        android:text="Choose preferred location"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/preferredLocation"
+                        android:layout_toLeftOf="@+id/imgarroa"
+                        android:paddingLeft="15dp"
+                        android:text="Your ideal meeting place."
+                        android:textColor="@color/colorgray_btn"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <ImageView
+                        android:id="@+id/imgarroa"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:checked="true"
+                        android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+                        android:thumbTint="@color/green" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorGray" />
+
+
+                <EditText
+                    android:id="@+id/txtLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:drawablePadding="5dp"
+                    android:gravity="start|top"
+                    android:hint="What is your meet-up schedule like? Suggest other preferred location and timings."
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:lines="4"
+                    android:textColor="@color/colorBlack"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:textSize="@dimen/text_size_14" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorGray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="7dp"
+                    android:paddingTop="7dp">
+
+                    <TextView
+                        android:id="@+id/preferredmailing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="15dp"
+                        android:text="@string/mailing_delivery"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <Switch
+                        android:id="@+id/swMailingDelivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:checked="true"
+                        android:thumbTint="@color/green" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorGray" />
+
+                <EditText
+                    android:id="@+id/txtMaling"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:drawablePadding="5dp"
+                    android:gravity="start|top"
+                    android:hint="Are there additional mailing or delivery fees and options?"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:lines="4"
+                    android:textColor="@color/colorBlack"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="#edf0f7"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="7dp"
+                    android:text="Reduce buyer questions by sharing more meet-up and delivery information."
+                    android:textColor="@color/colorgray_btn"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/btnDone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:text="LIST IT !"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_size_16" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>
